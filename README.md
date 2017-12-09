@@ -1,5 +1,5 @@
 # E-commerce Demo
-
+this is first automated project
 Demo of a Java e-commerce web site using Spring Framework.
 
 To build type:
