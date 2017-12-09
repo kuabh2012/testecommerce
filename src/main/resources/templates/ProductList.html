@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://localhost" xmlns:layout="http://www.w3.org/1999/xhtml" layout:decorator="default">
+<head>
+    <title>Products | 8-BLISS</title>
+</head>
+<body>
+    <div layout:fragment="content">
+        <div class="row">
+            <div class="col-4" th:each="product : ${products}">
+                <div><img th:src="@{/images/}+${product.photo}" th:alt="${product.category.name}" width="100%"/></div>
+                <div th:text="${product.category.name}"/>
+                <div><a th:href="@{/product/}+${product.id}" th:text="${product.collection.name}"/></div>
+                <div>£<span th:text="${product.price}"/></div>
+                <br/>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<!--Copyright 2016-2017 DiffBlue limited. All rights reserved.-->
